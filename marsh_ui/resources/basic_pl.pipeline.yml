@@ -1,0 +1,11 @@
+resources:
+  pipelines:
+    basic_pl:
+      name: basic_pl
+      libraries:
+        - glob:
+            include: ../src/basic_pl/transformations/**
+      serverless: true
+      catalog: workspace
+      schema: ${workspace.current_user.short_name}
+      root_path: ../src/basic_pl
